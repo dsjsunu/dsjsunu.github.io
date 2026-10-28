@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1020">
+<title>dsjsunu · 小作品</title>
+<meta name="description" content="一些可以打开就用的单页小项目：心愿树、银河弹珠局、留白填色、我们的小屋、AI 训练师刷题站。">
+<style>
+  :root{
+    --bg:#0b1020; --card:#141a2e; --line:rgba(255,255,255,.09);
+    --ink:#f4f1ea; --dim:rgba(244,241,234,.62); --accent:#ffd36e;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;min-height:100vh;background:
+      radial-gradient(80% 50% at 50% -10%, #1d2547 0%, transparent 70%),
+      radial-gradient(60% 40% at 100% 100%, #1a2b3a 0%, transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:64px 22px 80px}
+  header{text-align:center;margin-bottom:44px}
+  .eyebrow{font-size:11px;letter-spacing:.34em;color:var(--dim);text-transform:uppercase}
+  h1{margin:14px 0 10px;font-size:clamp(28px,5vw,44px);letter-spacing:.06em}
+  .lead{margin:0;color:var(--dim);font-size:14px;line-height:1.8}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .card{
+    position:relative;display:flex;flex-direction:column;gap:10px;
+    padding:20px 20px 16px;border-radius:18px;
+    background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    border:1px solid var(--line);
+    box-shadow:0 16px 40px rgba(0,0,0,.25);
+    text-decoration:none;color:inherit;
+    transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-3px);border-color:rgba(255,211,110,.4);box-shadow:0 22px 50px rgba(0,0,0,.35)}
+  .card::before{content:"";position:absolute;left:20px;right:20px;top:0;height:2px;border-radius:2px;background:var(--g)}
+  .card .emoji{font-size:24px;line-height:1}
+  .card h2{margin:0;font-size:17px;letter-spacing:.04em}
+  .card h2 small{display:block;margin-top:4px;font-size:10px;font-weight:500;letter-spacing:.14em;color:var(--dim);text-transform:uppercase}
+  .card p{margin:0;font-size:12.5px;line-height:1.7;color:var(--dim);flex:1}
+  .links{display:flex;gap:12px;font-size:12px;padding-top:2px}
+  .links span{color:var(--accent);border-bottom:1px solid rgba(255,211,110,.35);padding-bottom:1px}
+  footer{margin-top:46px;text-align:center;font-size:11.5px;color:var(--dim);line-height:2}
+  footer a{color:var(--accent);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">SMALL PROJECTS</div>
+    <h1>dsjsunu · 小作品</h1>
+    <p class="lead">一些做成单个页面、打开就能用的小东西。<br>全部 MIT 开源，源码和可下载的 zip 都在 GitHub。</p>
+  </header>
+
+  <main class="grid">
+    <a class="card" href="https://dsjsunu-labs.github.io/wish-tree/" style="--g:linear-gradient(90deg,#ff9dc4,#8becc7)">
+      <div class="emoji">🎄</div>
+      <h2>心愿树<small>Wish Tree</small></h2>
+      <p>挂照片或文字礼物，五种风格，许愿、放烟花。所有内容只存在你自己的浏览器里。</p>
+      <div class="links"><span>打开 →</span></div>
+    </a>
+
+    <a class="card" href="https://dsjsunu-labs.github.io/galaxy-marble/" style="--g:linear-gradient(90deg,#8ff8ff,#ff2d95)">
+      <div class="emoji">🎰</div>
+      <h2>银河弹珠局<small>Galaxy Marble Club</small></h2>
+      <p>投币、随机倍率、拉杆控力、12 灯道落袋，再攒能量吐一张星卡。</p>
+      <div class="links"><span>打开 →</span></div>
+    </a>
+
+    <a class="card" href="https://dsjsunu-labs.github.io/liubai-coloring/" style="--g:linear-gradient(90deg,#b96b4b,#d8be9e)">
+      <div class="emoji">🎨</div>
+      <h2>留白 · 填色实验室<small>Liubai Coloring</small></h2>
+      <p>28 套低饱和配色，碎片 / 彩绘玻璃 / 数字填色 / 像素拼豆，还能导出手机壁纸。</p>
+      <div class="links"><span>打开 →</span></div>
+    </a>
+
+    <a class="card" href="https://dsjsunu-labs.github.io/our-little-house/" style="--g:linear-gradient(90deg,#ffb3ce,#8fd6ba)">
+      <div class="emoji">🏠</div>
+      <h2>我们的小屋<small>Our Little House</small></h2>
+      <p>两个人的状态、报备、美食、旅行、日历与月度回忆，数据只留在本机。</p>
+      <div class="links"><span>打开 →</span></div>
+    </a>
+
+    <a class="card" href="https://dsjsunu-labs.github.io/ai-trainer-level3-quiz/" style="--g:linear-gradient(90deg,#9fd27a,#6f9c4f)">
+      <div class="emoji">📚</div>
+      <h2>AI 训练师三级刷题<small>Level-3 Quiz</small></h2>
+      <p>900 道客观题，错题本、模拟考试、番茄钟，可离线添加到主屏幕。</p>
+      <div class="links"><span>打开 →</span></div>
+    </a>
+  </main>
+
+  <footer>
+    源码都在 <a href="https://github.com/dsjsunu-labs">github.com/dsjsunu-labs</a><br>
+    MIT License · 没有后端，没有追踪
+  </footer>
+</div>
+</body>
+</html>
